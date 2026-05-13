@@ -516,7 +516,7 @@ footer{
 .fondprogramme{
     width: 100%;
     height: 550px;
-    background-image: linear-gradient(#11182779, #111827), url('images/baniiere2.jpg');
+    background-image: linear-gradient(#11182779, #111827), url('..images/baniiere2.jpg');
     background-size: cover;
     background-position: center 35%;
     background-repeat: no-repeat;
