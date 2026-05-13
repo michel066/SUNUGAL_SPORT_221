@@ -1,14 +1,292 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://googleapis.com" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Document</title>
-</head>
-<body>
-     <div class="menu">
-        <div class="logo"></div>
-     </div>
-</body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header  -->
+    <header>
+      <div class="dansheader">
+        <div class="menu header-inner">
+          <!-- Logo + icons -->
+          <a href="#accueil" class="lienlogo">
+            <div class="logo">SuS221</div>
+          </a>
+
+          <!-- Checkbox cachée (pour le menu burger sans JS) -->
+          <input type="checkbox" id="menuToggle" class="menu-checkbox" />
+
+          <!-- bouton menu visuel -->
+          <label
+            for="menuToggle"
+            class="menu-toggle"
+            aria-label="Ouvrir le menu"
+          >
+            <span></span>
+          </label>
+
+          <!-- Menu de navigation -->
+          <nav class="nav">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="tarifs.html">Tarifs</a>
+            <a href="inscription.html">Inscription</a>
+            <a href="coachs.html">Coachs</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- baniere et appel a l'action  -->
+    <div class="baniere">
+      <span class="spanun">POUR DES PROJETS SPROTIF QUI</span>
+      <span class="spanun spandeux">FONT LA DIFFERENCE.</span>
+      <small class="small"
+        >BIENVENU SUR LE SITE OFFICIELLE DE SUNUGAL SLPORT 221 NOUS SOMMES LES MEILLEURS POUR VOUS ACCOMPAGNER DANS VOTRE PROJET SPORTIF</small
+      >
+      <button class="button"><span>ESSAYEZ-NOUS GRATUITEMENT</span></button>
+    </div>
+    <!-- apercu quelque programme  -->
+    <div class="coach">
+      <div class="IMAGECOACH">
+        <img class="coachelastique" src="images/coach1.jpg" alt="" />
+      </div>
+      <div class="ecritpresentation">
+        <span class="ilsepasse spanun"
+          >Il se passe quelque chose <br />
+          de différent <br />ici.</span
+        >
+        <span class="ilsepasse spanun vraiment">Et c'est vraiment vrai.</span>
+        <small class="semettre">
+          Se mettre en forme ne fonctionne pas si l'on se concentre uniquement
+          sur l'effort physique. Et s'entraîner seul n'est jamais un signe de
+          force. Nos coachs vous accompagnent comme personne d'autre, en vous
+          offrant un soutien complet et personnalisé, aussi bien à la salle de
+          sport qu'en dehors. Notre communauté de membres a hâte de vous
+          accueillir.</small
+        ><br /><br /><br />
+        <button class="buttondeux">
+          <span>ESSAYEZ-NOUS GRATUITEMENT</span>
+        </button>
+      </div>
+    </div>
+    <div class="coach">
+      <div class="ecritpresentation DEUXDEUX">
+        <span class="spanun ilsepasse">Entraînement</span>
+        <span class="ilsepasse spanun vraiment">personnel</span>
+        <small class="semettre">
+          Atteingnez vos objectif de remise en forme grâce au coaching
+          personnalisé de SuS221. Nos contact conçoivent des programmes
+          d'entraînement sur mesure et vous offrent un accompagement expert pour
+          vous aider à optimiser vos performances et à suivre vos
+          progrès.</small
+        ><br /><br /><br />
+        <button class="buttondeux buttontrois">
+          <span>ESSAYEZ-NOUS GRATUITEMENT</span>
+        </button>
+      </div>
+      <div class="IMAGECOACH">
+        <img class="coachelastique coach3" src="images/coach3.jpg" alt="" />
+      </div>
+    </div>
+    <!-- Slogan motivant  -->
+    <div class="motivationslogan">
+      <div class="imgslogan">
+        <img class="imgslogan" src="images/SUS.jpg" alt="" />
+      </div>
+      <div class="texteslogant">
+        <span class="force">LA FORCE COMMENCE ICI</span>
+        <span class="titresolgant"
+          >SuS221 <i class="fa-solid fa-dumbbell" style="color: #facc15"></i
+        ></span>
+        <div class="description">
+          <small
+            >SUNUGALL SPORT 221 vous acompagne dans votre transformation
+            physique avec des programmes adaptés, des coachs qualifiés et un
+            espace moderne au coeur de Dakar.</small
+          >
+        </div>
+      </div>
+    </div>
+    <!-- presentation a la salle  -->
+    <div class="presentation">
+      ENTRAÎNEMENT PHYSIQUE FONDÉ SUR LA SCIENCES ET REPOSE SUR 4 PILIERS CLÉS
+    </div>
+    <div class="descriptionpresentation">
+      S'appuyant sur une expérience concrète auprès de millions de membres et
+      sur une approche scientifique, AF Training vous garantit des résultats
+      sûrs, efficaces et durables pour votre corps et votre esprit. Nous
+      utilisons des méthodes éprouvées axées sur le développement musculaire, le
+      bien-être physique et mental global, la variété des programmes et le suivi
+      des progrès.
+    </div>
+    <!-- image de presentation  -->
+    <div class="tablegrid">
+      <div>
+        <div class="presenteun">
+          <img class="imgpresentation" src="images/presentation.jpg" alt="" />
+          <p class="pun">
+            L'entraînement musculaire et cardiovasculaire optimise <br />
+            les performances
+          </p>
+          <div class="pdeux">
+            <small
+              >En combinant l'entraînement de résistance et le cardio, AF
+              Training améliore votre force, vos performances et votre niveau
+              d'énergie.</small
+            >
+          </div>
+          <div class="verifier">
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div>
+        <div class="presenteun">
+          <img class="imgpresentation" src="images/banniere4.jpg" alt="" />
+          <p class="pun">
+            L'entraînement musculaire et cardiovasculaire optimise <br />
+            les performances
+          </p>
+          <dir class="pdeux">
+            <small
+              >En combinant l'entraînement de résistance et le cardio, AF
+              Training améliore votre force, vos performances et votre niveau
+              d'énergie.</small
+            >
+          </dir>
+          <div class="verifier">
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="tablegrid">
+      <div>
+        <div class="presenteun">
+          <img class="imgpresentation" src="images/ausport.jpg" alt="" />
+          <p class="pun">
+            L'entraînement musculaire et cardiovasculaire optimise <br />
+            les performances
+          </p>
+          <dir class="pdeux">
+            <small
+              >En combinant l'entraînement de résistance et le cardio, AF
+              Training améliore votre force, vos performances et votre niveau
+              d'énergie.</small
+            >
+          </dir>
+          <div class="verifier">
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div>
+        <div class="presenteun">
+          <img
+            class="imgpresentation filletete"
+            src="images/filledeux au sport.jpg"
+            alt=""
+          />
+          <p class="pun">
+            L'entraînement musculaire et cardiovasculaire optimise <br />
+            les performances
+          </p>
+          <dir class="pdeux">
+            <small
+              >En combinant l'entraînement de résistance et le cardio, AF
+              Training améliore votre force, vos performances et votre niveau
+              d'énergie.</small
+            >
+          </dir>
+          <div class="verifier">
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+            <small
+              ><i class="fa-solid fa-check-double"></i>Développe et maintient la
+              force et l'endurance musculaires</small
+            >
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+  <div class="contienfooter">
+    <footer>
+      <div class="contientlien">
+        <small>mail: ondzagha ava michel bachealt</small>
+        <small>Telephone: +221 78 716 22 99</small>
+        <small>adresse: LIB 4 RUE 11000</small>
+      </div>
+      <div class="lien">
+        <a
+          class="aun"
+          href="https://www.linkedin.com/in/michel-bachelat-ondzagha-ava-26a03329b/"
+          ><i class="fa-brands fa-linkedin-in iconlk"></i
+        ></a>
+        <a class="aun" href="https://www.facebook.com/michel.ava.480876"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a class="aun" href="https://www.tiktok.com/@ava.michel59"
+          ><i class="fa-brands fa-tiktok tiktok"></i
+        ></a>
+      </div>
+    </footer>
+  </div>
+      <small class="copyright">Copyright © 2026 SUNUGAL SPORT 221. Tous droits réservés.</small>
 </html>

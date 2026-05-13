@@ -1,0 +1,1030 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F9FAFB;
+}
+
+header {
+    background-color:  #111827;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 6px 18px rgba(54, 0, 0, 0.05);
+    backdrop-filter: blur(12px);
+    top: 0;
+    left: 0;
+    box-sizing: border-box; 
+}
+
+.dansheader{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.header-inner {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* logo+ecris */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #F9FAFB;
+    background: linear-gradient(300deg, #27292e36, #E63946);
+    width: 130%;
+    height: 60px;
+    border-radius: 15px;
+}
+
+
+.lienlogo{
+    text-decoration: none;
+}
+
+ /* couleur iconlo */
+
+.iconlogo{
+    color: #FACC15;
+}
+
+/* La checkbox est invisible */
+.menu-checkbox {
+  display: none;
+}
+
+/* Le label est caché sur desktop (affiché seulement ≤ 860px) */
+.menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #E63946;
+  border-radius: 14px;
+  background: #F9FAFB;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.menu-toggle span,
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #E63946;
+  border-radius: 999px;
+  transition: 0.3s ease;
+  position: relative;
+}
+ 
+.menu-toggle::before {
+  position: absolute;
+  transform: translateY(-6px);  /* barre du haut */
+}
+ 
+.menu-toggle::after {
+  position: absolute;
+  transform: translateY(6px);   /* barre du bas */
+}
+
+/* Barre du milieu disparaît */
+.menu-checkbox:checked ~ .menu-toggle span {
+  opacity: 0;
+}
+ 
+/* Barre du haut pivote */
+.menu-checkbox:checked ~ .menu-toggle::before {
+  transform: rotate(45deg);
+}
+ 
+/* Barre du bas pivote */
+.menu-checkbox:checked ~ .menu-toggle::after {
+  transform: rotate(-45deg);
+}
+
+/* lien page  */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #E63946;
+  padding: 10px 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: 0.3s ease;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+ 
+.nav a:hover,
+.nav a:focus-visible {
+  background:  #111827;
+  color: #FACC15;
+  outline: none;
+}
+
+.nav a.active {
+    background-color: #E63946; 
+    color: #F9FAFB;           
+    font-weight: bold;
+}
+/* image baniere  */
+
+/* Utilise .baniere*/
+.baniere {
+    width: 100%;
+    margin: 0;
+    height: 800px;
+    background-image: linear-gradient(#11182779, #111827), url('/images/BANIERE3.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+
+    /* 3. Centrage du texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Style pour tes textes à l'intérieur */
+.spanun {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #F9FAFB;
+}
+
+.spandeux{
+    color: #FACC15;
+}
+
+.baniere small {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    width: 50%;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #aab0be;
+}
+
+/* button essayer nous  */
+
+.button{
+    width: 35%;
+    height: 50px;
+    background-color: #E63946;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    color: #F9FAFB;
+    margin-top: 70px;
+}
+
+.button :hover{
+    color: #111827;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+/* appercu de quelsque programme  */
+
+.coach{
+    margin-top: 120px;
+    display: flex;
+    margin-bottom: 130px;
+}
+
+.IMAGECOACH{
+    width: 50%;
+}
+
+.coachelastique{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.ecritpresentation{
+    background-color: #111827;
+    width: 50%;
+    height: 500px;
+    padding: 30px 50px 100px 50px;
+    text-align: left;
+}
+
+.ilsepasse{
+    display: block;
+    justify-content: left;
+}
+
+.vraiment{
+    display: block;
+    justify-content: left;
+    color: #FACC15;
+}
+
+.semettre{
+    font-size: 1.1rem;
+    max-width: 700px;
+    width: 50%;
+    font-family: 'Montserrat', Arial, sans-serif;   
+    color: #6B7280;
+}
+
+
+.buttondeux{
+    width: 70%;
+    height: 50px;
+    border: 1px solid #FACC15;
+    background-color: #11182700;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    color: #F9FAFB;
+}
+
+.buttondeux :hover{
+    color: #FACC15;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.coach3{
+    object-position: top;
+}
+
+.buttontrois{
+    border: 1px solid #FACC15;
+}
+
+.motivationslogan{
+    display: flex;
+    gap: 30px;
+    width: 95%;
+    margin: auto;
+}
+
+.texteslogant{
+    width:50%;
+    padding-top: 30px;
+}
+
+.force{
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    width: 100%;
+    display: flex;
+    color: #111827;
+}
+
+.titresolgant{
+    font-size: 4rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #E63946;
+}
+
+.description{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #6B7280;
+    line-height: 1.5pc;
+}
+
+.imgslogan{
+    width: 70%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.presentation{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size:  2.3rem;
+    font-weight: bolder;
+    display: block;
+    font-family:'Montserrat', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #E63946;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.185);
+    letter-spacing: 10;
+}
+
+.repose{
+    color: #111827;
+}
+
+.descriptionpresentation{
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    color: #6B7280;
+    line-height: 2pc;   
+    letter-spacing: 3;
+}
+
+.presenteun{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.verifier{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}
+
+.tablegrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.imgpresentation{
+  max-height: 600px;
+  height: 400px;
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pun{
+    margin: auto;
+    margin-bottom: 10px;
+    font-size:  2.3rem;
+    font-weight: bold;
+    font-family:'Montserrat', Arial, sans-serif;
+    color: #111827;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.pdeux{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    display: block;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    display: flex;
+    color: #4b4e53;
+    margin-top: 10px;
+}
+
+.verifier small{
+    color: #6B7280;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.verifier small i{
+    color: #E63946;
+    font-weight: bold;
+    text-align: left;
+}
+
+.filletete{
+    object-position: top;
+}
+
+.contienfooter{
+    height: 200px;
+    width: 100%;
+    background-color: #111827;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 90%;
+    margin: auto;
+    margin-top: 110px;
+}
+
+.copyright{
+    width: 100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b4e53;
+    color: #F9FAFB;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.aun{
+    text-decoration: none;
+    color: #F9FAFB;
+}
+
+.aun :hover{
+    color: #FACC15;
+}
+
+.contientlien{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    color: #F9FAFB;
+    font-size: 1rem;
+    line-height: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.lien {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+/* css programme */
+
+.fondprogramme{
+    width: 100%;
+    height: 550px;
+    background-image: linear-gradient(#11182779, #111827), url('/images/baniiere2.jpg');
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.foncoach{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    overflow: hidden;
+    background-image: none;
+}
+
+.video{
+   background : linear-gradient(#11182779, #111827), ;  
+   position: absolute;
+   width: 100vw;
+   object-fit: cover;
+   object-position: center center;
+   height: 800px;
+   z-index: 1;
+   margin-bottom: 400px;
+   filter: brightness(90%);
+}
+
+.decouvrez{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 380px;
+}
+
+.formation{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family:'Montserrat', Arial, sans-serif;
+    letter-spacing: 1px;
+    color: #E63946;
+    margin-top: 30px;
+}
+
+.contienttablegrid{
+    background-color: #aab0be4c;
+    height: 1300px;
+}
+
+.troisgrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    gap: 20px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.rectrois{
+  max-height: 600px;
+  height: 600px;
+  border-radius: 10px;
+  background-color: #F9FAFB;
+  box-shadow: 0 2px 7px rgba(2, 52, 75, 0.15);
+  transition: transform 0.1s;
+}
+
+.rectrois :hover{
+    transform: translateY(-5px);
+}
+
+.musculation :hover{
+    transform: none;
+}
+
+.image2{
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.musculation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#muscu{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+#renforcer{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #6B7280;
+    width: 90%;
+    text-align: center;
+}
+
+.plus{
+    margin-top: 15px;
+    width: 60%;
+    color: #F9FAFB;
+    background-color: #111827;
+    height: 50px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.plus:hover{
+    background-color: #F9FAFB;
+    color: #111827;
+   box-shadow: 0 1px 7px #11182749;
+   font-weight: 500;
+}
+
+.plusdeux{
+    color: #111827;
+    background-color: #aab0be00;
+   box-shadow: 0 1px 7px #11182749;
+   cursor: auto;
+   font-weight: 500;
+}
+
+.containtarif{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    margin-top: 100px;
+
+}
+.tarifun{
+    transition: transform 0.3s;
+  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.137);
+
+}
+.tarifun:hover{
+    transform: translateY(-10px);
+}
+
+.tarif{
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid #aab0be4f;
+    box-shadow: #111827;
+}
+
+.imgtarif{
+    margin-top: 50px;
+
+}
+
+.mois{
+    font-weight: bold;
+    font-family: 'Poppins', 'Roboto', sans-serif; 
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.trimestre {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.annuel{
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* inscription css  */
+form{
+    width: 50%;
+    margin: auto;
+    padding-top: 90px;
+}
+
+.contentformulaire{
+    width: 100%;
+    background-color: #111827;
+    height: 800px;
+}
+
+.email{
+    margin-top: 10px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    color: #FACC15;
+    font-weight: bold;
+    font-family: 'Poppins', 'Roboto', sans-serif; 
+}
+
+.mailtexte{
+    display: block;
+    background-color: #F9FAFB;
+    border: none;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', 'Roboto', sans-serif; 
+    color: #6B7280;
+}
+
+.mailtexte:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#message{
+    height: 200px;
+}
+
+.se{
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    height: 50px;
+    background-color: #E63946;
+    color: #F9FAFB;
+    font-weight: bold;
+}
+
+.se:hover{
+    background-color: #F9FAFB;
+    color: #FACC15;
+    transition: 0.3s;
+}
+
+.barrerouge{
+    width: 100%;
+    height: 100px;
+    background-color: #E63946;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F9FAFB;
+    font-family:'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.coachcontain{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.coachss{
+    height: 600px;
+    text-align: center;
+    background-color: #6B7280;
+    border: 1px solid #facc1594;
+}
+
+.prise{
+    width: 60%;
+    height: 50px;
+}
+
+.MUSCULA{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #FACC15;
+    margin-bottom: 30px;
+}
+
+.nom{
+    font-size: 2rem;
+}
+
+@media (max-width: 953px){
+    .menu-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 1002;
+  }
+    .header-inner {
+    min-height: 90px;
+  }
+  .nav{
+    position: fixed;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+    background-color: #F9FAFB;
+    border: 1px solid #E63946;
+    border-radius: 20px;
+    box-shadow: 0 14px 30px rgba(24, 48, 87, 0.08);
+    opacity: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+    width: 90%;
+    margin: auto;
+  }
+  .menu-checkbox:checked ~ .nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1242px) {
+    /* Forçage de la bannière aux dimensions de l'écran */
+    .baniere {
+        display: flex !important;
+        width: 100vw !important; /* Utilise la largeur physique de la fenêtre */
+        max-width: 100vw !important;
+        padding: 130px 15px 40px 15px !important;
+        box-sizing: border-box !important;
+        height: 600px;
+    }
+
+    /* Domptage des textes de la bannière */
+    .spanun {
+        font-size: 1.4rem !important;
+        width: 90% !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    .baniere small {
+        width: 90% !important;
+        font-size: 0.9rem !important;
+    }
+    .button {
+        width: 90% !important;
+        margin-top: 60px !important;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    /* 4. Désactivation forcée des blocs du bas qui font déborder le site */
+    .coach {
+        flex-direction: column !important;
+        width: 100% !important;
+        margin-top: 40px;
+    }
+    .IMAGECOACH, .ecritpresentation {
+        width: 100%
+    }
+
+    .ilsepasse{
+        width: 100% !important;
+        display: block !important;
+        text-align: left!important;
+    }
+
+    .DEUXDEUX{
+        height: 370px;
+    }
+
+    .coachelastique {
+        height: 300px !important;
+    }
+
+    .semettre {
+        width: 100% !important;
+    }
+
+    /* 5. Réduction des grilles d'images pour le format mobile */
+    .tablegrid {
+        grid-template-columns: 1fr !important; /* Passage obligatoire sur 1 colonne */
+        width: 100% !important;
+        padding: 0 15px !important;
+        gap: 20px !important;
+    }
+    .pun {
+        font-size: 1.4rem !important;
+    }
+    
+    .motivationslogan {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .texteslogant, .imgslogan {
+        width: 90% !important;
+        margin: auto !important;
+        font-size: 1rem;
+    }
+
+    .titresolgant {
+        font-size: 2rem !important;
+        text-align: left;
+    }
+    .description{
+        text-align: left;
+    }
+
+    .presenteun{
+        margin-top: 100px;
+    }
+    footer{
+        margin-bottom: 50px;
+        line-height: 10px;
+    }
+    .contientlien{
+        margin-top: 20px;
+        line-height: 10px;
+        font-size: 15px;
+    }
+    .copyright{
+        line-height: 20px;
+    }
+    .lien{
+        width: 30%;
+    }
+    .formation{
+        margin-bottom: 50px
+    }
+}
+
+@media (max-width: 900px) {
+    .troisgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .containtarif{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contienfooter{
+        margin-top: 1300px;
+    }
+    .coachcontain{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 1500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .troisgrid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+        .coachcontain{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 1500px;
+    }
+
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .fondprogramme {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .troisgrid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        width: 100% !important;
+        padding: 0 15px !important;
+        gap: 25px;
+    }
+
+    .rectrois {
+        width: 100% !important; 
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .image2 {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .containtarif{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contienfooter{
+        margin-top: 1300px;
+    }
+}
+
